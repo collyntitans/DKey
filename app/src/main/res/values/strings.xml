@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DKey</string>
+
+    <string name="title_activity_menu">menuActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="empty_key_list">No Key Has Been Added Yet</string>
+
+</resources>

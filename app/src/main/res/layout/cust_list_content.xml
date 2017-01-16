@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:clickable="true"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <ImageView
+        app:srcCompat="@drawable/lockimage"
+        android:id="@+id/testImageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="20dp"
+        android:layout_width="20dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/unlockDoorName"
+        android:textColor="@color/primaryText"
+        android:textSize="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/pressAndHold"
+        android:layout_below="@id/unlockDoorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondaryText"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="10dp"/>
+
+
+</RelativeLayout>

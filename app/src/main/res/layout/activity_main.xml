@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_material"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.nicky.test1.materialActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:theme="@style/AppTheme.NoActionBar.AppBarOverlay"
+            android:id="@+id/app_bar"
+            android:elevation="4dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_actionbar"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/colorPrimary"
+                android:elevation="4dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30dp"
+                            android:layout_gravity="center_vertical"/>
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="Press + button to redeem a key"
+                            android:textColor="#FFFFFF"
+                            android:layout_gravity="end"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            app:srcCompat="@drawable/dkeymainmenulogo"
+                            android:id="@+id/imageView"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:clickable="true"
+            app:srcCompat="@drawable/custom_plus"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="176dp"
+            android:id="@+id/redeemButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            app:fabSize="normal"
+            app:elevation="6dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="go_to_redeem"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar"
+            android:layout_alignParentStart="true"
+            android:id="@+id/main_door_list"
+            android:scrollbars="vertical"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_menu"
+        app:menu="@menu/activity_menu_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
+
